@@ -29,7 +29,7 @@ export default defineConfig({
   routes,
   // Theme for antd: https://ant.design/docs/react/customize-theme-cn
   theme: {
-    // 'primary-color': '#00c853',
+    'primary-color': '#00c853',
     // 'text-color': '#000',
     // 'layout-body-background': '',
     // 'primary-color': defaultSettings.primaryColor,

@@ -26,7 +26,6 @@ import HeaderSearch from '../HeaderSearch';
 import styles from './index.less';
 import { useEffect } from 'react';
 import { useState } from 'react';
-import { createABuilding, selectABuilding } from '@/models/buildings';
 import { useRef } from 'react';
 const ENVTagColor = {
   dev: 'orange',
@@ -55,14 +54,10 @@ const GlobalHeaderRight = (props) => {
 };
 
 export default connect(
-  ({ settings, buildings, user }) => ({
+  ({ settings, user }) => ({
     theme: settings.navTheme,
     layout: settings.layout,
-    buildings: buildings.buildings,
-    building: buildings.building,
-    buildingsLoading: buildings.loading.buildings,
-    buildingsCLoading: buildings.loading.creation,
     user: user.user,
   }),
-  { selectABuilding, createABuilding },
+  {},
 )(GlobalHeaderRight);

@@ -27,13 +27,13 @@ export default [
           {
             path: '/',
             component: '../layouts/BasicLayout',
-            authority: ['admin', 'user'],
             routes: [
               {
                 path: '/',
                 name: 'Home',
                 icon: 'smile',
                 component: './app/home/index',
+                authority: ['admin', 'user'],
               },
             ],
           },
