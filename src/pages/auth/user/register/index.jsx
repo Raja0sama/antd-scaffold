@@ -25,7 +25,7 @@ const Register = (props) => {
           rules={[
             {
               required: true,
-              message: 'Please input your Name!',
+              message: 'Please input your Name.',
             },
           ]}
         >
@@ -33,15 +33,15 @@ const Register = (props) => {
         </Form.Item>
 
         <Form.Item
-          name="username"
+          name="email"
           rules={[
             {
               required: true,
-              message: 'Please input your Username!',
+              message: 'Please input your Email.',
             },
           ]}
         >
-          <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
+          <Input prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Email" />
         </Form.Item>
         <Form.Item
           name="password"

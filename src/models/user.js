@@ -36,6 +36,8 @@ const UserModel = {
         yield call(Firestore.register_user_entry, auth.user.uid, {
           name: payload.name,
           email: payload.username,
+          authority: "admin",      // *** TEMP ***
+          created_at: new Date()
         });
       } catch (error) {
         var errorCode = error.code;

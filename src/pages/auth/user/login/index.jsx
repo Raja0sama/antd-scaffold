@@ -59,7 +59,7 @@ const Login = (props) => {
           />
         </Form.Item>
 
-        <Form.Item>
+        <Form.Item >
           <Button
             loading={loading}
             block
@@ -69,8 +69,25 @@ const Login = (props) => {
           >
             Login
           </Button>
+
         </Form.Item>
       </Form>
+
+      <div className={styles.btnsContainer}>
+        <a href="/user/register" className={styles.btn}>
+          <Button
+            block
+            htmlType="submit"
+          >
+            Signup
+        </Button>
+        </a>
+        <a href="/user/resetPassword">
+          <Button type="link" className={styles.forgetBtn}>
+            Forget Password?
+          </Button>
+        </a>
+      </div>
     </div>
   );
 };

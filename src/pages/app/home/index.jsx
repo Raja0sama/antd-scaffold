@@ -1,12 +1,13 @@
 import React from 'react';
 import { PageContainer } from '@ant-design/pro-layout';
-import { Card, Alert, Typography, Empty, Skeleton, Select } from 'antd';
+import { Card, Alert, Typography, Empty, Skeleton, Select, Button } from 'antd';
 import { useIntl, FormattedMessage } from 'umi';
 import styles from './index.less';
 import { getAuthority } from '@/utils/authority';
 import Emp from '@/assets/void.svg';
 import { connect } from 'umi';
 import { Option } from 'antd/lib/mentions';
+import ScheduleWebinar  from "../../../components/ScheduleWebinar"
 const CodePreview = ({ children }) => (
   <pre className={styles.pre}>
     <code>
@@ -35,7 +36,7 @@ export default connect((user) => ({ user: user.user }))((props) => {
   return (
     <PageContainer>
       <Card>
-        {props.user.user.authority == 'customer' && (
+        {/* {props.user.user.authority == 'customer' && (
           <Select
             showSearch
             style={{ width: 200 }}
@@ -55,7 +56,13 @@ export default connect((user) => ({ user: user.user }))((props) => {
           </Select>
         )}
 
-        <Empty image={Emp} imageStyle={{ height: 300 }} />
+        <Empty image={Emp} imageStyle={{ height: 300 }} /> */}
+
+        <div className={styles.homeItem}>
+          <h3>Webinar</h3>
+          <p>Organize a webinar, allow people to register, and present using screen sharing, audio, and webcam sharing.</p>
+          <ScheduleWebinar />
+        </div>
       </Card>
     </PageContainer>
   );

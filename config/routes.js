@@ -17,6 +17,11 @@ export default [
             path: '/user/register',
             component: './auth/user/register',
           },
+          {
+            name: 'resetPassoword',
+            path: '/user/resetPassword',
+            component: './auth/user/resetPassword',
+          }
         ],
       },
 
@@ -33,6 +38,13 @@ export default [
                 name: 'Home',
                 icon: 'smile',
                 component: './app/home/index',
+                authority: ['admin', 'user'],
+              },
+              {
+                path: '/MyWebinars',
+                name: 'My Webinars',
+                icon: 'videoCamera',
+                component: './app/myWebinars/index',
                 authority: ['admin', 'user'],
               },
             ],

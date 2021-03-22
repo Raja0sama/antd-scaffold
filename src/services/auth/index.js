@@ -6,6 +6,17 @@ const login_with_email = (email, password) => auth().signInWithEmailAndPassword(
 const register_with_email = (email, password) =>
   auth().createUserWithEmailAndPassword(email, password);
 
+const resetPassoword = async (email) => {
+
+  return await auth().sendPasswordResetEmail(email).then(() => {
+    return true
+  })
+    .catch((err) => {
+      return false;
+    })
+
+}
+
 const logout = () => {
   return auth().signOut();
 };
@@ -21,6 +32,7 @@ const Auth = {
   register_with_email,
   subscribe,
   curr_user: currUser,
+  resetPassoword
 };
 
 export default Auth;
